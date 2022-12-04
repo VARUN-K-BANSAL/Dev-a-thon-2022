@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/server/firebase.json
+# /server/firebase.json
 /server/firebase-old.json
 
 Team - Solution makers.zip
