@@ -15,7 +15,7 @@ export const socialIcons = [
   { text: "Facebook", icon: "fab fa-facebook", link: "" },
   { text: "Instagram", icon: "fab fa-instagram", link: "" },
   { text: "Pinterest", icon: "fab fa-pinterest", link: "" },
-  { text: "YouTube", icon: "fab fa-youtube", link: "" },
+  { text: "Github", icon: "fab fa-github", link: "https://github.com/VARUN-K-BANSAL/Dev-a-thon-2022" },
 ];
 
 export const profile = [
