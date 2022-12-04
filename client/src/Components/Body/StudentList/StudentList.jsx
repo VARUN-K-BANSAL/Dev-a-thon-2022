@@ -8,12 +8,6 @@ import axios from "axios";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 
 function StudentList(props) {
-  const [formValues, setFormValues] = useState({
-    name: "",
-    email: "",
-    msg: "",
-  });
-
   const [formInputFields, setFormInputFields] = useState([])
   const [formInput, setFormInput] = useState([0, 0, 0, 0])
   const [studentBoxes, setstudentBoxes] = useState([])
@@ -21,7 +15,7 @@ function StudentList(props) {
 
   const getData = async (inDefaultMode) => {
     const profile = props.profile
-    if(profile == 'webDev') {
+    if(profile === 'webDev') {
       setFormInputFields([
         {
           text: "Backend Web Technologies",
@@ -52,7 +46,7 @@ function StudentList(props) {
       })
       setstudentBoxes(data.data)
     } 
-    else if(profile == 'appDev') {
+    else if(profile === 'appDev') {
       setFormInputFields([
         {
           text: "Android",
@@ -81,7 +75,7 @@ function StudentList(props) {
       })
       setstudentBoxes(data.data)
     }
-    else if(profile == 'software') {
+    else if(profile === 'software') {
       setFormInputFields([
         {
           text: "Data Structures",
@@ -110,7 +104,7 @@ function StudentList(props) {
       })
       setstudentBoxes(data.data)
     }
-    else if(profile == 'cyber') {
+    else if(profile === 'cyber') {
       setFormInputFields([
         {
           text: "Operating System",
@@ -132,7 +126,7 @@ function StudentList(props) {
       })
       setstudentBoxes(data.data)
     }
-    else if(profile == 'dataScience') {
+    else if(profile === 'dataScience') {
       setFormInputFields([
         {
           text: "Python",
@@ -161,7 +155,7 @@ function StudentList(props) {
       })
       setstudentBoxes(data.data)
     }
-    else if(profile == 'machineLearning') {
+    else if(profile === 'machineLearning') {
       setFormInputFields([
         {
           text: "Python",
@@ -207,7 +201,7 @@ function StudentList(props) {
 
   useEffect(() => {
     getData(true)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCheckBoxChange = (e) => {
     if(defaultState === false) {

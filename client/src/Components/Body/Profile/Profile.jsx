@@ -57,7 +57,7 @@ function Profile(props) {
     setName(data.data.name)
 
     let temp = []
-    labels.map((lab) => {
+    labels.forEach((lab) => {
       temp.push(data.data[lab])
     })
 
@@ -73,7 +73,7 @@ function Profile(props) {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={`${styles["profile-page"]}`}>
@@ -177,7 +177,7 @@ function Profile(props) {
           id="resumeDiv"
           style={{ display: "none" }}
         >
-          <iframe src={resume} className={`${styles["iframe"]}`}/>
+          <iframe src={resume} className={`${styles["iframe"]}`} title="resume"/>
         </div>
       </div>
     </div>
