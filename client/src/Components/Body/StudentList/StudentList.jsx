@@ -13,6 +13,8 @@ function StudentList(props) {
   const [studentBoxes, setstudentBoxes] = useState([])
   const [defaultState, setDefaultState] = useState(true)
 
+  const URL = "https://backend-analyse-me.onrender.com"
+
   const getData = async (inDefaultMode) => {
     const profile = props.profile
     if(profile === 'webDev') {
@@ -38,7 +40,7 @@ function StudentList(props) {
       ])
 
       console.log(formInput);
-      const data = await axios.post('/webDevStudents', {
+      const data = await axios.post(`${URL}/webDevStudents`, {
         "inDefaultMode": inDefaultMode,
         "backend": formInput[0],
         "frontend": formInput[1],
@@ -67,7 +69,7 @@ function StudentList(props) {
           type: "Number",
         }
       ])
-      const data = await axios.post('/appDevStudents', {
+      const data = await axios.post(`${URL}/appDevStudents`, {
         "inDefaultMode": inDefaultMode,
         "android": formInput[0],
         "ios": formInput[1],
@@ -96,7 +98,7 @@ function StudentList(props) {
           type: "Number",
         }
       ])
-      const data = await axios.post('/softwareDeveloperStudents', {
+      const data = await axios.post(`${URL}/softwareDeveloperStudents`, {
         "inDefaultMode": inDefaultMode,
         "data_structures": formInput[0],
         "algorithms": formInput[1],
@@ -119,7 +121,7 @@ function StudentList(props) {
           type: "Number",
         }
       ])
-      const data = await axios.post('/cyberSecurityStudents', {
+      const data = await axios.post(`${URL}/cyberSecurityStudents`, {
         "inDefaultMode": inDefaultMode,
         "operating_system": formInput[0],
         "communication_networks": formInput[1]
@@ -147,7 +149,7 @@ function StudentList(props) {
           type: "Number",
         }
       ])
-      const data = await axios.post('/dataScienceStudents', {
+      const data = await axios.post(`${URL}/dataScienceStudents`, {
         "inDefaultMode": inDefaultMode,
         "python": formInput[0],
         "multivariate_calculus_linear_algebra": formInput[1],
@@ -182,7 +184,7 @@ function StudentList(props) {
           type: "Number",
         }
       ])
-      const data = await axios.post('/machineLearningStudents', {
+      const data = await axios.post(`${URL}/machineLearningStudents`, {
         "inDefaultMode": inDefaultMode,
         "python": formInput[0],
         "multivariate_calculus_linear_algebra": formInput[1],
