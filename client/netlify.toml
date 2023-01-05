@@ -1,0 +1,50 @@
+## This rule redirects to an external API, signing requests with a secret
+[[redirects]]
+  from = "/appDevStudents"
+  to = "https://backend-analyse-me.onrender.com/appDevStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/webDevStudents"
+  to = "https://backend-analyse-me.onrender.com/webDevStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/softwareDeveloperStudents"
+  to = "https://backend-analyse-me.onrender.com/softwareDeveloperStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/cyberSecurityStudents"
+  to = "https://backend-analyse-me.onrender.com/cyberSecurityStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/dataScienceStudents"
+  to = "https://backend-analyse-me.onrender.com/dataScienceStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/machineLearningStudents"
+  to = "https://backend-analyse-me.onrender.com/machineLearningStudents"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
+[[redirects]]
+  from = "/getAllStudentsData"
+  to = "https://backend-analyse-me.onrender.com/getAllStudentsData"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+  signed = "API_SIGNATURE_TOKEN"
