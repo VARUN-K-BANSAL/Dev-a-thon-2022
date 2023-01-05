@@ -252,7 +252,10 @@ function StudentList(props) {
           <input type={"Number"} max={100} placeholder={"Enter database Weightage"} value={databaseInput} onChange={(e) => setDataBaseInput(e.target.value)}/> */}
           <AppButton text="Get Developers" clickEvent={getDevelopers}/>
         </div>
-        <div className={`${styles["contact-boxes"]}`}>{studentBoxesRow}</div>
+        {
+          (studentBoxes.length === 0)? <h1 className={styles.loading}>Loading...</h1>:
+          <div className={`${styles["contact-boxes"]}`}>{studentBoxesRow}</div>
+        }
       </div>
     </div>
   );
